@@ -8,12 +8,14 @@ import Login from './screens/login/Login'
 import Register from './screens/register/Register'
 import { ConfigProvider, theme } from 'antd'
 import reportWebVitals from './reportWebVitals'
-import './index.css'
+import Home from './screens/home/Home'
+import Auth from './features/auth/auth'
 
+import './index.css'
 const router = createBrowserRouter([
 	{
 		path: Paths.home,
-		element: <h1>home</h1>,
+		element: <Home />,
 	},
 	{
 		path: Paths.login,
@@ -36,7 +38,9 @@ root.render(
 					algorithm: theme.darkAlgorithm,
 				}}
 			>
-				<RouterProvider router={router} />
+				<Auth>
+					<RouterProvider router={router} />
+				</Auth>
 			</ConfigProvider>
 		</Provider>
 	</React.StrictMode>
