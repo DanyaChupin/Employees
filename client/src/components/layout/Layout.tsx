@@ -1,7 +1,7 @@
 import { Layout as AntLayout } from 'antd'
 import Header from '../header/Header'
-
 import styles from './Layout.module.css'
+
 type Props = {
 	children: React.ReactNode
 }
